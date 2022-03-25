@@ -4,15 +4,21 @@
 
 Ubuntu Installing and configuring Elasticsearch must go through a few steps. Add the repository key first,
 
-```wget -qO -[https://artifacts.elastic.co/GPG-KEY-elasticsearch](https://artifacts.elastic.co/GPG-KEY-elasticsearch) | sudo apt-key add -```
+```
+wget -qO -[https://artifacts.elastic.co/GPG-KEY-elasticsearch](https://artifacts.elastic.co/GPG-KEY-elasticsearch) | sudo apt-key add -
+```
 
 Install the Apt Transport HTTPS since it might not be installed by default.
 
-```sudo apt-get install apt-transport-https```
+```
+sudo apt-get install apt-transport-https
+```
 
 Now run the following commands to complete the installation.
 
-```echo https://artifacts.elastic.co/packages/7.x/apt stable main&quot; | sudo tee -a /etc/apt/sources.list.d/elastic-8.x.list```
+```
+echo https://artifacts.elastic.co/packages/7.x/apt stable main&quot; | sudo tee -a /etc/apt/sources.list.d/elastic-8.x.list
+```
 
 Install ELK
 ```
