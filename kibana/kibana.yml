@@ -1,0 +1,27 @@
+---
+## Default Kibana configuration from Kibana base image.
+## https://github.com/elastic/kibana/blob/master/src/dev/build/tasks/os_packages/docker_generator/templates/kibana_yml.template.ts
+#
+server.name: kibana
+server.host: localhost
+elasticsearch.hosts: [ "http://localhost:9200" ]
+monitoring.ui.container.elasticsearch.enabled: true
+
+## X-Pack security credentials
+#
+#elasticsearch.username: elastic
+#elasticsearch.password: kPRL++uoFfVH5-76UcKX
+elasticsearch.serviceAccountToken: "AAEAAWVsYXN0aWMva2liYW5hL3Rva2VuX3Z6dXd1bjhCY3ljSkV5YW1xbDFiOnBzaHFLZjU5UnltZGdINE80X05jd1E"
+xpack.encryptedSavedObjects.encryptionKey: K7Le8gf6fCSbpjmgFWfgDLVNd5FPQ3PT
+
+xpack.security.authc.providers:
+  saml.saml1:
+    order: 0
+    realm: "saml1"
+    description: "Log in with WSO2 via SAML"
+  oidc.oidc1:
+    order: 1
+    realm: "oidc1"
+    description: "Log in with WSO2 via OIDC"
+  basic.basic1:
+    order: 2
