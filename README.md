@@ -17,7 +17,7 @@ sudo apt-get install apt-transport-https
 Now run the following commands to complete the installation.
 
 ```
-echo https://artifacts.elastic.co/packages/7.x/apt stable main&quot; | sudo tee -a /etc/apt/sources.list.d/elastic-8.x.list
+echo https://artifacts.elastic.co/packages/8.x/apt stable main&quot; | sudo tee -a /etc/apt/sources.list.d/elastic-8.x.list
 ```
 
 Install ELK
