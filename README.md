@@ -5,7 +5,7 @@
 Ubuntu Installing and configuring Elasticsearch must go through a few steps. Add the repository key first,
 
 ```
-wget -qO -[https://artifacts.elastic.co/GPG-KEY-elasticsearch](https://artifacts.elastic.co/GPG-KEY-elasticsearch) | sudo apt-key add -
+wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo gpg --dearmor -o /usr/share/keyrings/elasticsearch-keyring.gpg
 ```
 
 Install the Apt Transport HTTPS since it might not be installed by default.
