@@ -29,9 +29,16 @@ sudo apt-get install kibana
 
 ## Running the project
 
-Run in the following order one after another,
+Run in the following order one after another from parent directory,
+
+You can use logstash configs as,
+* debug - for debugging and testing purposes
+* http - http publisher from WSO2 IS (Default)
+* filebeat - logger publisher from WSO2 IS via Filbeat
+
 ```
-sudo sh elasticsearch.sh
-sudo sh logstash.sh
-sudo sh kibana.sh
+sudo sh ./elasticsearch/elasticsearch.sh
+sudo sh ./filbeat/filbeat.sh
+sudo sh ./logstashlogstash.sh -c <<configuration type default: http>>
+sudo sh ./kibana/kibana.sh
 ```
