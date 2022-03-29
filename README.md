@@ -25,6 +25,8 @@ Install ELK
 sudo apt-get install elasticsearch &&
 sudo apt-get install logstash &&
 sudo apt-get install kibana
+
+sudo apt-get install filebeat (If necessary)
 ```
 
 ## Running the project
