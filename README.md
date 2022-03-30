@@ -41,6 +41,6 @@ You can use logstash configs as,
 ```
 sudo sh ./elasticsearch/elasticsearch.sh
 sudo sh ./filbeat/filbeat.sh
-sudo sh ./logstashlogstash.sh -c <<configuration type default: http>>
+sudo sh ./logstash/logstash.sh -c <<configuration type default: http>>
 sudo sh ./kibana/kibana.sh
 ```
