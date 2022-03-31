@@ -23,5 +23,9 @@ xpack.security.authc.providers:
     order: 1
     realm: "oidc1"
     description: "Log in with WSO2 via OIDC"
-  basic.basic1:
+  oidc.oidc2:
     order: 2
+    realm: "oidc2"
+    description: "Log in with WSO2 via OIDC v2.0"
+  basic.basic1:
+    order: 3
