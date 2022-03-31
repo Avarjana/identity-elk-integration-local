@@ -18,14 +18,10 @@ xpack.security.authc.providers:
   saml.saml1:
     order: 0
     realm: "saml1"
-    description: "Log in with WSO2 via SAML"
+    description: "Log in with WSO2 via SAML (Under Development)"
   oidc.oidc1:
     order: 1
     realm: "oidc1"
     description: "Log in with WSO2 via OIDC"
-  oidc.oidc2:
-    order: 2
-    realm: "oidc2"
-    description: "Log in with WSO2 via OIDC v2.0"
   basic.basic1:
     order: 3
