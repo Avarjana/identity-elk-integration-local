@@ -6,12 +6,8 @@ filebeat.inputs:
   multiline.negate: false
   multiline.match: after
   paths:
-    #- /var/log/*.log
-    - /home/avarjana/Documents/ELK/wso2is-5.12.0-alpha14/repository/logs/wso2carbon.log
-    - "/home/avarjana/Documents/ELK/ELK DEV/filebeat/sample.log"
-    #- c:\programdata\elasticsearch\logs\*
+    - <IS-HOME>/repository/logs/wso2carbon.log
 
 output.logstash:
-  # The Logstash hosts
   hosts: ["localhost:5044"]
 
