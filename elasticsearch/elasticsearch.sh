@@ -12,10 +12,8 @@ cp jvm.options /etc/elasticsearch/jvm.options
 
 cp jswkset.json /etc/elasticsearch/jswkset.json
 
-# add metadata for SSO
-# cp metadata_new.xml /etc/elasticsearch/config/saml/metadata_new.xml
-
-echo "Zl2Q03cTGXqgat7ntm9MfuP4eToa" | sudo -u elasticsearch /usr/share/elasticsearch/bin/elasticsearch-keystore add -x 'xpack.security.authc.realms.oidc.oidc1.rp.client_secret' -f
+# UNCOMMENT FOR OIDC SSO
+# echo "CLIENT SECRET" | sudo -u elasticsearch /usr/share/elasticsearch/bin/elasticsearch-keystore add -x 'xpack.security.authc.realms.oidc.oidc1.rp.client_secret' -f
 
 /usr/share/elasticsearch/bin/elasticsearch-users useradd wso2user -p changeme -r superuser
 
