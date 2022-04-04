@@ -15,9 +15,10 @@ elasticsearch.serviceAccountToken: "AAEAAWVsYXN0aWMva2liYW5hL3Rva2VuX3Z6dXd1bjhC
 xpack.encryptedSavedObjects.encryptionKey: K7Le8gf6fCSbpjmgFWfgDLVNd5FPQ3PT
 
 xpack.security.authc.providers:
-  oidc.oidc1:
-    order: 0
-    realm: "oidc1"
-    description: "Log in with WSO2 via OIDC"
   basic.basic1:
-    order: 1
+    order: 0
+  # oidc.oidc1:
+  #   order: 1
+  #   realm: "oidc1"
+  #   description: "Log in with WSO2 via OIDC"
+  
