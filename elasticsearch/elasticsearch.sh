@@ -7,10 +7,10 @@ chown -R elasticsearch /usr/share/elasticsearch
 chown -R elasticsearch /etc/elasticsearch
 
 cp elastic.yml /etc/elasticsearch/elasticsearch.yml
-cp cert.cer /etc/elasticsearch/cert.cer
+# cp cert.cer /etc/elasticsearch/cert.cer
 cp jvm.options /etc/elasticsearch/jvm.options
 
-cp jswkset.json /etc/elasticsearch/jswkset.json
+# cp jswkset.json /etc/elasticsearch/jswkset.json
 
 # UNCOMMENT FOR OIDC SSO
 # echo "CLIENT SECRET" | sudo -u elasticsearch /usr/share/elasticsearch/bin/elasticsearch-keystore add -x 'xpack.security.authc.realms.oidc.oidc1.rp.client_secret' -f
