@@ -1,13 +1,17 @@
 filebeat.inputs:
-- type: log
+- type: filestream
   enabled: true
-  multiline.type: pattern
-  multiline.pattern: '^[[:space:]]Event:'
-  multiline.negate: false
-  multiline.match: after
+  parsers:
+    - multiline:
+        type: pattern
+        pattern: '^[[:space:]]Event:'
+        negate: false
+        match: after
+  include_lines: ['Event:']
   paths:
-    - <IS-HOME>/repository/logs/wso2carbon.log
-
+   - /home/avarjana/Documents/WSO2/wso2is-5.12.0-alpha18/repository/logs/wso2carbon.log
+   - /home/avarjana/Documents/WSO2/sample.log
+filebeat.registry.path: /var/lib/filebeat/registry
 output.logstash:
+  # The Logstash hosts
   hosts: ["localhost:5044"]
-
